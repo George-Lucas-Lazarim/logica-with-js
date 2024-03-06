@@ -22,25 +22,35 @@
     }
 
     var numeroPensado = sorteia(10);
+    var tentativas = 1;
 
-    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+    while(tentativas <= 3) {
 
-    if(chute == numeroPensado) {
+        var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
 
-        mostra("Uau! Você acertou, eu pensei no " + numeroPensado)
+        if(chute == numeroPensado) {
 
-    } else {
-
-        if(chute > numeroPensado) {
-
-            mostra("Você errou! Seu chute é maior que o número pensado!");
+            mostra("Uau! Você acertou, eu pensei no " + numeroPensado)
+            break; // Desta forma ele quebra o while
 
         } else {
 
-            mostra("Você errou! Seu chute é menor que o número pensado!")
+            if(chute > numeroPensado) {
+
+                mostra("Você errou! Seu chute é maior que o número pensado!");
+
+            } else {
+
+                mostra("Você errou! Seu chute é menor que o número pensado!")
+
+            }
 
         }
 
+        tentativas++;
+
     }
+
+    mostra("FIM")
 
 </script>

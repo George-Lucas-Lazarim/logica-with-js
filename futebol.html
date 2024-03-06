@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>")
+
+    }
+
+    function mostra(mensagem) {
+
+        document.write(mensagem)
+        pulaLinha()
+
+    }
+
+    // var vitorias = prompt("Entre com o número de vitórias."); o prompt só pega string, sendo assim mesmo quando colocado um número ele irá considerar como se fosse uma string "10"
+    var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+    var empates = parseInt(prompt("Entre com o número de empates."));
+
+    var pontos = vitorias * 3 + empates;
+
+    mostra("Os pontos do seu time é: " + pontos)
+
+    if (pontos > 28); {
+
+        mostra("Seu time está melhor do que o ano passado.");
+
+    }
+
+    if (pontos < 28); {
+
+        mostra("Seu time está pior que o ano passado.");
+
+    }
+
+    if (pontos == 28); {
+
+        mostra("Seu timme está igual ao ano passado.");
+
+    }
+
+    mostra("FIM");
+        
+</script>

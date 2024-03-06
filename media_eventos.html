@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br><br>");
+
+	}
+
+	function mostra(mensagem) {
+
+		document.write(mensagem);
+		pulaLinha();
+
+	}
+
+	var quantidadeEventos = parseInt(prompt("Qual foi o número de eventos?"));
+	var contagem = 1;
+	var valorTotal = 0;
+
+	while(contagem <= quantidadeEventos) {
+
+		var valorEvento = parseInt(prompt("Qual o valor do Evento?"));
+		valorTotal = valorTotal + valorEvento;
+		contagem++;
+
+	}
+
+	var mediaEventos = valorTotal / quantidadeEventos;
+	mostra("O valor medio dos eventos foi: " + mediaEventos);
+	mostra("FIM");
+
+</script>	

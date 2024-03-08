@@ -5,16 +5,27 @@
 
 <script>
 
-	var segredo = 5;
+	var segredos = [5, 7, 10, 2];
 	var input = document.querySelector("input");
+	input.focus();
 
 	function verifica() {
 
-		if(input.value == segredo) {
+		var achou = false;
 
-			alert("Você ACERTOU!!!");
+		for(var posicao = 0; posicao < segredos.length; posicao++) {
 
-		} else {
+			if(input.value == segredos[posicao]) {
+
+				alert("Você ACERTOU!!!");
+				achou = true;
+				break;
+
+			}
+
+		}
+
+		if(achou == false) {
 
 			alert("Você ERROU!!!");
 
@@ -26,7 +37,6 @@
 	}
 
 	var button = document.querySelector("button");
-
 	button.onclick = verifica;
 
 </script>

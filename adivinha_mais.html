@@ -5,12 +5,6 @@
 
 <script>
 
-	function mostra(mensagem) {
-
-		document.write(mensagem);
-
-	}
-
 	var segredo = 5;
 	var input = document.querySelector("input");
 
@@ -18,13 +12,16 @@
 
 		if(input.value == segredo) {
 
-			mostra("Você ACERTOU!!!");
+			alert("Você ACERTOU!!!");
 
 		} else {
 
-			mostra("Você ERROU!!!");
+			alert("Você ERROU!!!");
 
 		}
+
+		input.value = "";
+		input.focus();
 
 	}
 
